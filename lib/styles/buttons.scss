@@ -1,0 +1,183 @@
+@import 'colors.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+
+/*================================
+=            BUTTONS            =
+================================*/
+.btn {
+  border-radius: $border-radius;
+  font-size: $font-size-base;
+  padding: 0.7rem 1rem;
+  font-weight: bold;
+  min-width: 100px;
+  cursor: pointer;
+  line-height: 1;
+  border: none;
+  height: auto;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    text-decoration: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  &.btn-disabled,
+  &[disabled='disabled'],
+  &[disabled='true'],
+  &[disabled=''] {
+    box-shadow: none !important;
+    pointer-events: none;
+    cursor: default;
+    opacity: .5;
+  }
+  &.btn-primary {
+    @mixin gradient $accent-color, color($accent-color lightness(-5%));
+    color: $white;
+    border-bottom: 1px solid;
+    border-color: $accent-dark-color;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+
+    &:hover {
+      @mixin gradient $accent-dark-color, color($accent-dark-color lightness(-5%));
+      border-color: color($accent-dark-color lightness(-5%));
+    }
+
+    &.btn-outline {
+      background: transparent;
+      box-shadow: none;
+      border: 1px solid;
+      color: $accent-color;
+      &:hover {
+        color: $white;
+        border-color: $white;
+        background: $accent-color;
+      }
+    }
+  }
+  &.btn-success {
+    @mixin gradient $success-color, color($success-color lightness(-5%));
+    color: $white;
+    border-bottom: 1px solid;
+    border-color: $success-dark-color;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+
+    &:hover {
+      @mixin gradient $success-dark-color, color($success-dark-color lightness(-5%));
+      border-color: color($success-dark-color lightness(-5%));
+    }
+
+    &.btn-outline {
+      background: transparent;
+      box-shadow: none;
+      border: 1px solid;
+      color: $success-color;
+      &:hover {
+        color: $white;
+        border-color: $white;
+        background: $success-color;
+      }
+    }
+  }
+  &.btn-warning {
+    @mixin gradient $warning-color, color($warning-color lightness(-5%));
+    color: $white;
+    border-bottom: 1px solid;
+    border-color: $warning-dark-color;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+
+    &:hover {
+      @mixin gradient $warning-dark-color, color($warning-dark-color lightness(-5%));
+      border-color: color($warning-dark-color lightness(-5%));
+    }
+
+    &.btn-outline {
+      background: transparent;
+      box-shadow: none;
+      border: 1px solid;
+      color: $opposite-color;
+      &:hover {
+        color: $white;
+        border-color: $white;
+        background: $opposite-color;
+      }
+    }
+  }
+  &.btn-danger {
+    @mixin gradient $danger-color, color($danger-color lightness(-5%));
+    color: $white;
+    border-bottom: 1px solid;
+    border-color: $danger-dark-color;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+
+    &:hover {
+      @mixin gradient $danger-dark-color, color($danger-dark-color lightness(-5%));
+      border-color: color($danger-dark-color lightness(-5%));
+    }
+
+    &.btn-outline {
+      background: transparent;
+      box-shadow: none;
+      border: 1px solid;
+      color: $danger-color;
+      &:hover {
+        color: $white;
+        border-color: $white;
+        background: $danger-color;
+      }
+    }
+  }
+  &.btn-link {
+    background: transparent;
+    color: $accent-color;
+    box-shadow: none;
+    font-weight: 400;
+    display: inline;
+    border: none;
+    min-width: 0;
+    padding: 0;
+    &:hover {
+      background: transparent;
+      color: $accent-dark-color;
+    }
+
+    &.btn-outline {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &.btn-default {
+    @mixin gradient $gray-color, color($gray-color lightness(-5%));
+    color: $white;
+    border-bottom: 1px solid;
+    border-color: $gray-dark-color;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+
+    &:hover {
+      @mixin gradient $gray-dark-color, color($gray-dark-color lightness(-5%));
+      border-color: color($gray-dark-color lightness(-5%));
+    }
+  }
+
+  &.btn-sm {
+    padding: 0.5rem 0.8rem;
+  }
+
+  &.btn-bg {
+    padding: 1.1rem 1.8rem 1rem;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+  }
+}
+/*-----  End of BUTTONS  ------*/

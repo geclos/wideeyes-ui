@@ -1,0 +1,23 @@
+$gray-color: #DDDDDD;
+$accent-color: #0074D9;
+$danger-color: #FF4136;
+$success-color: #2ECC40;
+$warning-color: #FFDC00;
+$black: rgba(0, 0, 0, 0.84);
+$blackish: rgba(0, 0, 0, 0.55);
+
+$gray-dark-color: color($gray-color lightness(-15%));
+$accent-dark-color: color($accent-color lightness(-15%));
+$danger-dark-color: color($danger-color lightness(-15%));
+$success-dark-color: color($success-color lightness(-15%));
+$warning-dark-color: color($warning-color lightness(-15%));
+$white: white;
+
+
+$link-hover-color: $accent-dark-color;
+$link-color: $accent-color;
+$panel-header-color: $white;
+$page-header-color: $white;
+$background-color: $white;
+$border-color: $gray;
+$text-color: $black;

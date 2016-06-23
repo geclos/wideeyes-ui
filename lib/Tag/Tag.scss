@@ -1,0 +1,35 @@
+@import '../styles/colors.scss';
+@import '../styles/variables.scss';
+
+.root {
+  background-color: rgba(11, 181, 255, 0.08);
+  border: 1px solid rgba(11, 181, 255, 0.24);
+  border-radius: $border-radius;
+  font-size: 0.85rem;
+  color: $accent-color;
+}
+
+.closeContainer {
+  display: inline-block;
+  text-align: center;
+  border-right: 1px solid rgba(11, 181, 255, 0.24);
+}
+
+.close {
+  background: transparent;
+  border: none;
+  padding: 2px 5px;
+  border-radius: none;
+  color: $accent-color;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  background-color: rgba(11, 181, 255, 0.12);
+}
+
+.attributeContainer {
+  text-align: center;
+  display: inline-block;
+  padding: 0 5px;
+}
