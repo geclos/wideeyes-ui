@@ -1,3 +1,4 @@
+$white: white;
 $gray-color: #DDDDDD;
 $accent-color: #0074D9;
 $danger-color: #FF4136;
@@ -10,8 +11,14 @@ $gray-dark-color: color($gray-color lightness(-15%));
 $accent-dark-color: color($accent-color lightness(-15%));
 $danger-dark-color: color($danger-color lightness(-15%));
 $success-dark-color: color($success-color lightness(-15%));
-$warning-dark-color: color($warning-color lightness(-15%));
-$white: white;
+$warning-dark-color: color($warning-color lightness(-5%));
+
+$gray-light-color: color($gray-color lightness(+5%));
+$accent-light-color: color($accent-color lightness(+15%));
+$danger-light-color: color($danger-color lightness(+15%));
+$success-light-color: color($success-color lightness(+15%));
+$warning-light-color: color($warning-color lightness(+15%));
+
 
 
 $link-hover-color: $accent-dark-color;

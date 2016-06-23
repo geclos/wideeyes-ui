@@ -2,9 +2,20 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
+$light: 5%;
+
 /*================================
 =            BUTTONS            =
 ================================*/
+
+@define-placeholder boxShadowBtn {
+  box-shadow: 0 2px 2px rgba(0,0,0,.15);
+}
+
+@define-placeholder boxShadowBtnHover {
+  box-shadow: 0 1px 1px rgba(0,0,0,.15);
+}
+
 .btn {
   border-radius: $border-radius;
   font-size: $font-size-base;
@@ -22,7 +33,6 @@
 
   &:hover {
     text-decoration: none !important;
-    box-shadow: none !important;
     outline: none !important;
   }
 
@@ -36,15 +46,18 @@
     opacity: .5;
   }
   &.btn-primary {
-    @mixin gradient $accent-color, color($accent-color lightness(-5%));
+    @mixin gradient $accent-color, $accent-dark-color;
+    @extend boxShadowBtn;
+
     color: $white;
     border-bottom: 1px solid;
-    border-color: $accent-dark-color;
-    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    border-color: color($accent-dark-color lightness(-$light));
 
     &:hover {
-      @mixin gradient $accent-dark-color, color($accent-dark-color lightness(-5%));
-      border-color: color($accent-dark-color lightness(-5%));
+      @mixin gradient $accent-dark-color, color($accent-dark-color lightness(-$light));
+      @extend boxShadowBtnHover;
+
+      border-color: color($accent-dark-color lightness(-$light));
     }
 
     &.btn-outline {
@@ -60,15 +73,18 @@
     }
   }
   &.btn-success {
-    @mixin gradient $success-color, color($success-color lightness(-5%));
+    @mixin gradient $success-color, color($success-color lightness(-$light));
+    @extend boxShadowBtn;
+
     color: $white;
     border-bottom: 1px solid;
-    border-color: $success-dark-color;
-    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    border-color: color($success-dark-color lightness(-$light));
 
     &:hover {
-      @mixin gradient $success-dark-color, color($success-dark-color lightness(-5%));
-      border-color: color($success-dark-color lightness(-5%));
+      @mixin gradient $success-dark-color, color($success-dark-color lightness(-$light));
+      @extend boxShadowBtnHover;
+
+      border-color: color($success-dark-color lightness(-$light));
     }
 
     &.btn-outline {
@@ -84,15 +100,18 @@
     }
   }
   &.btn-warning {
-    @mixin gradient $warning-color, color($warning-color lightness(-5%));
+    @mixin gradient $warning-color, color($warning-color lightness(-$light));
+    @extend boxShadowBtn;
+
     color: $white;
     border-bottom: 1px solid;
-    border-color: $warning-dark-color;
-    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    border-color: color($warning-dark-color lightness(-$light));
 
     &:hover {
-      @mixin gradient $warning-dark-color, color($warning-dark-color lightness(-5%));
-      border-color: color($warning-dark-color lightness(-5%));
+      @mixin gradient $warning-dark-color, color($warning-dark-color lightness(-$light));
+      @extend boxShadowBtnHover;
+
+      border-color: color($warning-dark-color lightness(-$light));
     }
 
     &.btn-outline {
@@ -108,15 +127,18 @@
     }
   }
   &.btn-danger {
-    @mixin gradient $danger-color, color($danger-color lightness(-5%));
+    @mixin gradient $danger-color, color($danger-color lightness(-$light));
+    @extend boxShadowBtn;
+
     color: $white;
     border-bottom: 1px solid;
-    border-color: $danger-dark-color;
-    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    border-color: color($danger-dark-color lightness(-$light));
 
     &:hover {
-      @mixin gradient $danger-dark-color, color($danger-dark-color lightness(-5%));
-      border-color: color($danger-dark-color lightness(-5%));
+      @mixin gradient $danger-dark-color, color($danger-dark-color lightness(-$light));
+      @extend boxShadowBtnHover;
+
+      border-color: color($danger-dark-color lightness(-$light));
     }
 
     &.btn-outline {
@@ -152,15 +174,18 @@
   }
 
   &.btn-default {
-    @mixin gradient $gray-color, color($gray-color lightness(-5%));
+    @mixin gradient $gray-color, color($gray-color lightness(-$light));
+    @extend boxShadowBtn;
+
     color: $white;
     border-bottom: 1px solid;
     border-color: $gray-dark-color;
-    box-shadow: 0 1px 1px rgba(0,0,0,.15);
 
     &:hover {
-      @mixin gradient $gray-dark-color, color($gray-dark-color lightness(-5%));
-      border-color: color($gray-dark-color lightness(-5%));
+      @mixin gradient $gray-dark-color, color($gray-dark-color lightness(-$light));
+      @extend boxShadowBtnHover;
+
+      border-color: color($gray-dark-color lightness(-$light));
     }
   }
 
