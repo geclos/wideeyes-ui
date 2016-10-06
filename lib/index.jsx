@@ -1,6 +1,0 @@
-export * from './form.jsx'
-export * from './hero.jsx'
-export * from './buttons.jsx'
-export * from './Tag/Tag.jsx'
-export * from './Table/Table.jsx'
-export * from './LoadingSpinner/LoadingSpinner.jsx'

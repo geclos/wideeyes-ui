@@ -1,6 +1,4 @@
-@import '../styles/animations.scss';
 @import '../styles/colors.scss';
-
 
 @keyframes loadingSpinner {
   0% {
@@ -17,8 +15,8 @@
 .white {
   .root {
     .spinner {
-      border-top-color: $white !important;
-      border-left-color: $white !important;
+      border-top-color: $white;
+      border-left-color: $white;
     }
   }
 }
@@ -26,26 +24,26 @@
 .root {
   display: inline-block;
   .spinner {
-    @mixin animation loadingSpinner, 600ms, linear infinite;
+    animation: loadingSpinner 300ms linear infinite;
     border: 2px solid transparent;
-    border-top-color: $accent-color;
     border-left-color: $accent-color;
+    border-top-color: $accent-color;
     border-radius: 50%;
-    display: block;
-    height: 28px;
     margin: 0 auto;
-    width: 28px;
+    display: block;
     z-index: 2000;
+    height: 20px;
+    width: 20px;
   }
 }
 .fixed {
-  position: fixed;
-  width: 100%;
-  background: $white;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1000;
+  position: fixed;
+  background: $white;
 }
 .container {
   display: flex;
@@ -55,4 +53,8 @@
 .row {
   display: flex;
   align-items: center;
+}
+.small .root .spinner {
+  height: 8px;
+  width: 8px;
 }

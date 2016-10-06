@@ -1,6 +1,6 @@
 @import 'colors.scss';
-@import 'variables.scss';
 @import 'mixins.scss';
+@import 'variables.scss';
 
 $light: 5%;
 
@@ -8,15 +8,9 @@ $light: 5%;
 =            BUTTONS            =
 ================================*/
 
-@define-placeholder boxShadowBtn {
-  box-shadow: 0 2px 2px rgba(0,0,0,.15);
-}
-
-@define-placeholder boxShadowBtnHover {
-  box-shadow: 0 1px 1px rgba(0,0,0,.15);
-}
-
 .btn {
+  @mixin transition background, .2s;
+
   border-radius: $border-radius;
   font-size: $font-size-base;
   padding: 0.7rem 1rem;
@@ -24,8 +18,8 @@ $light: 5%;
   min-width: 100px;
   cursor: pointer;
   line-height: 1;
-  border: none;
   height: auto;
+  border: none;
 
   &:focus {
     outline: none;
@@ -40,161 +34,109 @@ $light: 5%;
   &[disabled='disabled'],
   &[disabled='true'],
   &[disabled=''] {
-    box-shadow: none !important;
     pointer-events: none;
     cursor: default;
     opacity: .5;
   }
   &.btn-primary {
-    @mixin gradient $accent-color, $accent-dark-color;
-    @extend boxShadowBtn;
-
     color: $white;
-    border-bottom: 1px solid;
-    border-color: color($accent-dark-color lightness(-$light));
+    background: $accent-color;
 
     &:hover {
-      @mixin gradient $accent-dark-color, color($accent-dark-color lightness(-$light));
-      @extend boxShadowBtnHover;
-
-      border-color: color($accent-dark-color lightness(-$light));
+      background: $accent-dark-color;
     }
 
     &.btn-outline {
       background: transparent;
-      box-shadow: none;
-      border: 1px solid;
       color: $accent-color;
       &:hover {
         color: $white;
-        border-color: $white;
         background: $accent-color;
       }
     }
   }
   &.btn-success {
-    @mixin gradient $success-color, color($success-color lightness(-$light));
-    @extend boxShadowBtn;
-
     color: $white;
-    border-bottom: 1px solid;
-    border-color: color($success-dark-color lightness(-$light));
+    background: $success-color;
 
     &:hover {
-      @mixin gradient $success-dark-color, color($success-dark-color lightness(-$light));
-      @extend boxShadowBtnHover;
-
-      border-color: color($success-dark-color lightness(-$light));
+      background: $success-dark-color;
     }
 
     &.btn-outline {
       background: transparent;
-      box-shadow: none;
-      border: 1px solid;
       color: $success-color;
       &:hover {
         color: $white;
-        border-color: $white;
         background: $success-color;
       }
     }
   }
   &.btn-warning {
-    @mixin gradient $warning-color, color($warning-color lightness(-$light));
-    @extend boxShadowBtn;
-
     color: $white;
-    border-bottom: 1px solid;
-    border-color: color($warning-dark-color lightness(-$light));
+    background: $warning-color;
 
     &:hover {
-      @mixin gradient $warning-dark-color, color($warning-dark-color lightness(-$light));
-      @extend boxShadowBtnHover;
-
-      border-color: color($warning-dark-color lightness(-$light));
+      background: $warning-dark-color;
     }
 
     &.btn-outline {
       background: transparent;
-      box-shadow: none;
-      border: 1px solid;
       color: $opposite-color;
       &:hover {
         color: $white;
-        border-color: $white;
         background: $opposite-color;
       }
     }
   }
   &.btn-danger {
-    @mixin gradient $danger-color, color($danger-color lightness(-$light));
-    @extend boxShadowBtn;
-
     color: $white;
-    border-bottom: 1px solid;
-    border-color: color($danger-dark-color lightness(-$light));
+    background: $danger-color;
 
     &:hover {
-      @mixin gradient $danger-dark-color, color($danger-dark-color lightness(-$light));
-      @extend boxShadowBtnHover;
-
-      border-color: color($danger-dark-color lightness(-$light));
+      background: $danger-dark-color;
     }
 
     &.btn-outline {
       background: transparent;
-      box-shadow: none;
-      border: 1px solid;
       color: $danger-color;
       &:hover {
         color: $white;
-        border-color: $white;
         background: $danger-color;
       }
     }
   }
   &.btn-link {
     background: transparent;
+    padding: 0 !important;
     color: $accent-color;
-    box-shadow: none;
     font-weight: 400;
     display: inline;
-    border: none;
     min-width: 0;
-    padding: 0;
     &:hover {
-      background: transparent;
-      color: $accent-dark-color;
+      text-decoration: underline !important;
     }
 
     &.btn-outline {
       background: transparent;
-      box-shadow: none;
     }
   }
 
   &.btn-default {
-    @mixin gradient $gray-color, color($gray-color lightness(-$light));
-    @extend boxShadowBtn;
-
     color: $white;
-    border-bottom: 1px solid;
-    border-color: $gray-dark-color;
 
     &:hover {
-      @mixin gradient $gray-dark-color, color($gray-dark-color lightness(-$light));
-      @extend boxShadowBtnHover;
-
-      border-color: color($gray-dark-color lightness(-$light));
     }
   }
 
   &.btn-sm {
+    font-size: 12px;
     padding: 0.5rem 0.8rem;
   }
 
   &.btn-bg {
-    padding: 1.1rem 1.8rem 1rem;
+    font-weight: 16px;
+    padding: 0.9rem 1rem;
     text-transform: uppercase;
   }
 

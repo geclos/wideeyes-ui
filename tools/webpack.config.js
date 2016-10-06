@@ -51,11 +51,15 @@ const config = {
   module: {
     loaders: [
       {
+        loader: 'babel',
         test: /\.jsx?$|\.js?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        query: {
+          'presets': ['stage-3', 'es2015', 'react'],
+          'plugins': ['transform-class-properties']
+        }
       }, {
-        test: /\.scss$/,
+        test: /\.scss$|\.css$/,
         loader: 'style-loader!css-loader?modules&importLoaders=1!postcss-loader'
       }
     ]

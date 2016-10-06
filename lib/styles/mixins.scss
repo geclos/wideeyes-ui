@@ -1,8 +1,9 @@
 @define-mixin transition $prop, $speed {
+  -webkit-transition: $prop $speed ease-in-out;
   transition: $prop $speed ease-in-out;
 }
 
-@mixin card($depth) {
+@define-mixin card($depth) {
   @if $depth < 1 {
     box-shadow: none;
   } @else if $depth > 5 {
