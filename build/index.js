@@ -127,8 +127,8 @@ ReactDOM.render((
       </section>
     </section>
     <section style={{display: 'flex', marginTop: '2rem', alignItems: 'center'}}>
-      <div style={{marginRight: '.5rem'}}><Tag value='example' active /></div>
-      <Tag value='example' onClick={() => window.alert('I was clicked!')} />
+      <div style={{marginRight: '.5rem'}}><Tag value='I am active' active /></div>
+      <Tag value='I am not active' onClick={() => window.alert('I was clicked!')} />
       <TextField
         placeholder='This is a placeholder'
         containerProps={{style: {marginLeft: '1rem', width: 300}}}
