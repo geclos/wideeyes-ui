@@ -1,6 +1,7 @@
 @import 'colors.scss';
 @import 'mixins.scss';
 @import 'variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 $light: 5%;
 
@@ -13,9 +14,8 @@ $light: 5%;
 
   border-radius: $border-radius;
   font-size: $font-size-base;
-  padding: 0.7rem 1rem;
+  padding: 12px 14px;
   font-weight: bold;
-  min-width: 100px;
   cursor: pointer;
   line-height: 1;
   height: auto;
@@ -131,12 +131,12 @@ $light: 5%;
 
   &.btn-sm {
     font-size: 12px;
-    padding: 0.5rem 0.8rem;
+    padding: 10px 12px;
   }
 
   &.btn-bg {
     font-weight: 16px;
-    padding: 0.9rem 1rem;
+    padding: 14px 16px;
     text-transform: uppercase;
   }
 

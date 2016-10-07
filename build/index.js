@@ -3,14 +3,15 @@ const ReactDOM = require('react-dom')
 
 const Tag = require('../lib').Tag
 const Button = require('../lib').Button
+const TextField = require('../lib').TextField
 const LoadingSpinner = require('../lib').LoadingSpinner
 
 ReactDOM.render((
   <section style={{
+    margin: '2rem',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
-    margin: '2rem'
+    justifyContent: 'space-around'
   }}
   >
     <section style={{display: 'flex', justifyContent: 'space-around'}}>
@@ -125,9 +126,15 @@ ReactDOM.render((
         </div>
       </section>
     </section>
-    <section style={{display: 'flex', marginTop: '2rem'}}>
+    <section style={{display: 'flex', marginTop: '2rem', alignItems: 'center'}}>
       <div style={{marginRight: '.5rem'}}><Tag value='example' active /></div>
-      <Tag value='example' onClick={() => alert('I was clicked!')} />
+      <Tag value='example' onClick={() => window.alert('I was clicked!')} />
+      <TextField
+        placeholder='This is a placeholder'
+        containerProps={{style: {marginLeft: '1rem', width: 300}}}
+      />
+    </section>
+    <section style={{display: 'flex', marginTop: '2rem'}}>
     </section>
   </section>
 ), document.getElementById('root'))
