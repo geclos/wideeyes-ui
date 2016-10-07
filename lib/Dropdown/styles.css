@@ -1,0 +1,47 @@
+@import '../styles/colors.scss';
+.root {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.title {
+  color: $black;
+  line-height: 1;
+  font-size: 14px;
+  user-select: none;
+  border-radius: 3px;
+  padding: 10px 12px;
+  background-color: $white;
+  border: 1px solid $gray-color;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.optionsContainer {
+  top: -3px;
+  width: 100%;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  background-color: $white;
+  border-radius: 0 0 3px 3px;
+  border: 1px solid $gray-color;
+  border-top: none;
+}
+
+.caret {
+  margin-left: 12px;
+  text-align: right;
+  display: inline-block;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: transform .15s linear;
+}
+
+.opened {
+  display: block;
+}

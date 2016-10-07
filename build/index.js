@@ -3,6 +3,7 @@ const ReactDOM = require('react-dom')
 
 const Tag = require('../lib').Tag
 const Button = require('../lib').Button
+const Dropdown = require('../lib').Dropdown
 const TextField = require('../lib').TextField
 const LoadingSpinner = require('../lib').LoadingSpinner
 
@@ -135,6 +136,7 @@ ReactDOM.render((
       />
     </section>
     <section style={{display: 'flex', marginTop: '2rem'}}>
+      <Dropdown title='Actions' options={[{value: 'foo'}]} />
     </section>
   </section>
 ), document.getElementById('root'))
