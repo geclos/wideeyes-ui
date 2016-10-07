@@ -18,6 +18,11 @@
   transition: border-color ease-in-out .2s, box-shadow ease-in-out .2s;
 }
 
+.inputSmall {
+  font-size: 12px;
+  padding: 7px 95px 8px 9px;
+}
+
 .input::placeholder {
   color: $gray-color;
 }
@@ -25,4 +30,15 @@
 .input:focus {
   outline: none;
   border-color: $black;
+}
+
+.clearContainer {
+  top: 11px;
+  right: 87px;
+  position: absolute;
+}
+
+.clearContainerSmall {
+  top: 8px;
+  right: 75px;
 }

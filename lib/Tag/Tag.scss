@@ -5,11 +5,11 @@
 .root {
   z-index: 1;
   color: white;
-  padding: .5rem;
   line-height: 1;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
+  padding: 10px 12px;
   border-radius: 3px;
   position: relative;
   display: inline-block;
@@ -20,10 +20,10 @@
 .root::before {
   top: 0px;
   content: "";
-  width: 30px;
+  width: 34px;
   z-index: -1;
   left: -15px;
-  height: 32px;
+  height: 34px;
   position: absolute;
   border-radius: 50%;
   background-color: $gray-light-color;
@@ -32,9 +32,9 @@
 .root::after {
   top: 0px;
   content: "";
-  width: 30px;
+  width: 34px;
   z-index: -1;
-  height: 32px;
+  height: 34px;
   right: -15px;
   position: absolute;
   border-radius: 50%;

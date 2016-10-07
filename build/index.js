@@ -133,6 +133,11 @@ ReactDOM.render((
         placeholder='This is a placeholder'
         containerProps={{style: {marginLeft: '1rem', width: 300}}}
       />
+      <TextField
+        size='sm'
+        placeholder='This is a placeholder'
+        containerProps={{style: {marginLeft: '1rem', width: 300}}}
+      />
     </section>
     <section style={{display: 'flex', marginTop: '2rem'}}>
     </section>
