@@ -95,11 +95,6 @@ ReactDOM.render((
       </section>
       <section>
         <div style={{marginBottom: '1rem'}}>
-          <Button size='sm' mode='danger'>
-            Small button
-          </Button>
-        </div>
-        <div style={{marginBottom: '1rem'}}>
           <Button size='sm' mode='primary'>
             Small button
           </Button>
