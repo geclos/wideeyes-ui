@@ -28,15 +28,15 @@ const config = {
   debug: DEBUG,
 
   stats: {
+    hash: true,
     colors: true,
-    hash: VERBOSE,
+    chunks: true,
+    cached: true,
+    version: true,
     timings: true,
     reasons: DEBUG,
-    chunks: VERBOSE,
-    cached: VERBOSE,
-    version: VERBOSE,
-    chunkModules: VERBOSE,
-    cachedAssets: VERBOSE
+    chunkModules: true,
+    cachedAssets: true
   },
 
   plugins: [
@@ -53,7 +53,7 @@ const config = {
       {
         loader: 'babel',
         test: /\.jsx?$|\.js?$/,
-        exclude: /node_modules/,
+        exclude: /node_modules|dist/,
         query: {
           'presets': ['stage-3', 'es2015', 'react'],
           'plugins': ['transform-class-properties']
@@ -86,19 +86,20 @@ export const buildConfig = merge({}, config, {
     path: path.join(__dirname, '../dist')
   },
   externals: {
-    React: 'react',
-    cn: 'classnames'
+    'react': 'react',
+    'react-dom': 'react-dom',
+    'classnames': 'classnames'
   },
   plugins: [
     new webpack.DefinePlugin(GLOBALS),
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        screw_ie8: true,
-        warnings: VERBOSE
-      }
-    })
+    new webpack.optimize.AggressiveMergingPlugin()
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     screw_ie8: true,
+    //     warnings: VERBOSE
+    //   }
+    // })
   ]
 })
 

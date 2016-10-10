@@ -1,11 +1,7 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 
-const Tag = require('../lib').Tag
-const Button = require('../lib').Button
-const Dropdown = require('../lib').Dropdown
-const TextField = require('../lib').TextField
-const LoadingSpinner = require('../lib').LoadingSpinner
+const {TextField, Tag, Button, Dropdown, LoadingSpinner} = require('../dist')
 
 ReactDOM.render((
   <section style={{
@@ -125,18 +121,9 @@ ReactDOM.render((
     <section style={{display: 'flex', marginTop: '2rem', alignItems: 'center'}}>
       <div style={{marginRight: '.5rem'}}><Tag value='I am active' active /></div>
       <Tag value='I am not active' onClick={() => window.alert('I was clicked!')} />
-      <TextField
-        placeholder='This is a placeholder'
-        containerProps={{style: {marginLeft: '1rem', width: 300}}}
-      />
-      <TextField
-        size='sm'
-        placeholder='This is a placeholder'
-        containerProps={{style: {marginLeft: '1rem', width: 300}}}
-      />
-    </section>
-    <section style={{display: 'flex', marginTop: '2rem'}}>
-      <Dropdown title='Actions' options={[{value: 'foo'}]} />
+      <Dropdown title='actions' options={[{value: 'foo'}]} containerProps={{style: {marginLeft: '1rem'}}} />
+      <TextField size='sm' containerProps={{style: {marginLeft: '1rem'}}} />
+      <TextField containerProps={{style: {marginLeft: '1rem'}}} />
     </section>
   </section>
 ), document.getElementById('root'))
