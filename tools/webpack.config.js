@@ -79,7 +79,7 @@ const config = {
 // -----------------------------------------------------------------------------
 
 export const buildConfig = merge({}, config, {
-  entry: path.join(__dirname, '../lib/index.jsx'),
+  entry: path.join(__dirname, '../lib/index.js'),
   output: {
     filename: 'index.js',
     libraryTarget: 'commonjs',
