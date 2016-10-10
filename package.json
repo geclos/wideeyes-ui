@@ -45,6 +45,7 @@
     "parser": "babel-eslint"
   },
   "files": [
+    "index.js",
     "dist"
   ]
 }
