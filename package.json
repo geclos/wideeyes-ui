@@ -44,7 +44,7 @@
   "standard": {
     "parser": "babel-eslint"
   },
-  "files": {
+  "files": [
     "dist"
-  }
+  ]
 }
